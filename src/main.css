@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — tobacco heritage palette */
+  --color-tobacco-50:  #FAF6F0;
+  --color-tobacco-100: #F1E9DC;
+  --color-tobacco-200: #E2D3BC;
+  --color-tobacco-300: #C9B08A;
+  --color-tobacco-400: #A8865B;
+  --color-tobacco-500: #8B6F47;   /* warm brass */
+  --color-tobacco-600: #6E532F;
+  --color-tobacco-700: #5C3A24;   /* tobacco brown — primary */
+  --color-tobacco-800: #432B1B;
+  --color-tobacco-900: #2B1B11;
+
+  /* Cream / paper */
+  --color-cream-50:  #FEFCF6;
+  --color-cream-100: #FBF6EB;
+  --color-cream-200: #F5EBD7;
+  --color-cream-300: #EADFC3;
+  --color-cream-400: #D6C6A1;
+
+  /* Forest — deep accent */
+  --color-forest-50:  #F1F5F0;
+  --color-forest-200: #C5D3BF;
+  --color-forest-400: #6B8663;
+  --color-forest-600: #3E5438;
+  --color-forest-700: #2F4029;
+  --color-forest-800: #1F2B1C;
+  --color-forest-900: #141D11;
+
+  /* Ink / charcoal for type */
+  --color-ink-50:  #F6F5F2;
+  --color-ink-100: #E8E5DE;
+  --color-ink-200: #C9C4B9;
+  --color-ink-300: #A39C8E;
+  --color-ink-400: #6F685B;
+  --color-ink-500: #4F4A3F;
+  --color-ink-600: #3A352D;
+  --color-ink-700: #2A261F;
+  --color-ink-800: #1A1813;
+  --color-ink-900: #0F0E0A;
+
+  /* Accent — warm brass highlight */
+  --color-brass-300: #D8B97A;
+  --color-brass-400: #C99F4F;
+  --color-brass-500: #B4853A;
+
+  /* Typography */
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-serif:   'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-cream-50);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink-800);
+  background: var(--color-cream-50);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-tobacco-700);
+  color: var(--color-cream-50);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-cream-100); }
+::-webkit-scrollbar-thumb { background: var(--color-tobacco-300); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-tobacco-500); }
+
+.font-display { font-family: var(--font-display); }
+.font-serif   { font-family: var(--font-serif); }
+.font-body    { font-family: var(--font-body); }
+
+.text-balance { text-wrap: balance; }
+.text-pretty  { text-wrap: pretty; }
+
+/* Paper grain texture */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+}
+
+/* Photographic black & white with warm tint */
+.bw-warm {
+  filter: grayscale(0.9) sepia(0.22) contrast(1.05) brightness(0.95);
+}
+.bw-deep {
+  filter: grayscale(1) contrast(1.08) brightness(0.88);
+}
+
+/* Editorial divider */
+.rule-heritage {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-tobacco-600);
+}
+.rule-heritage::before,
+.rule-heritage::after {
+  content: '';
+  width: 36px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* Timeline dot */
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-tobacco-700);
+  border: 2px solid var(--color-cream-50);
+  box-shadow: 0 0 0 1px var(--color-tobacco-700);
+  border-radius: 50%;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slow-zoom {
+  0%   { transform: scale(1.00); }
+  100% { transform: scale(1.08); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-fade-in    { animation: fade-in 0.9s ease-out both; }
+.animate-slow-zoom  { animation: slow-zoom 18s ease-out forwards; }
+.animate-marquee    { animation: marquee 60s linear infinite; }
+
+:focus-visible {
+  outline: 2px solid var(--color-tobacco-600);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .drop-cap::first-letter {
+    font-family: var(--font-display);
+    font-size: 4.25rem;
+    line-height: 0.85;
+    float: left;
+    padding: 6px 12px 0 0;
+    color: var(--color-tobacco-700);
+    font-weight: 500;
+  }
+}

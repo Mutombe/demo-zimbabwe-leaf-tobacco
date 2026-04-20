@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="leaf" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B6F47"/>
+      <stop offset="100%" stop-color="#5C3A24"/>
+    </linearGradient>
+  </defs>
+  <!-- Circular frame -->
+  <circle cx="60" cy="60" r="56" fill="#FDFBF2" stroke="#5C3A24" stroke-width="1.5"/>
+  <!-- Leaf / wheat mark -->
+  <g transform="translate(60 34)">
+    <path d="M0 0 C -8 4, -12 12, -12 22 C -12 30, -6 36, 0 36 C 6 36, 12 30, 12 22 C 12 12, 8 4, 0 0 Z"
+          fill="url(#leaf)"/>
+    <path d="M0 4 L 0 34" stroke="#FDFBF2" stroke-width="1" fill="none"/>
+    <path d="M0 12 L -6 16 M0 18 L -7 23 M0 24 L -6 29 M0 12 L 6 16 M0 18 L 7 23 M0 24 L 6 29"
+          stroke="#FDFBF2" stroke-width="0.8" fill="none" opacity="0.7"/>
+  </g>
+  <!-- ZLT monogram -->
+  <text x="60" y="92" text-anchor="middle"
+        font-family="Fraunces, 'Times New Roman', serif"
+        font-size="22" font-weight="500" letter-spacing="4"
+        fill="#5C3A24">ZLT</text>
+  <!-- Est. ring text would go here -->
+  <text x="60" y="108" text-anchor="middle"
+        font-family="Inter, sans-serif"
+        font-size="6" letter-spacing="3"
+        fill="#8B6F47">EST · 1918</text>
+</svg>
