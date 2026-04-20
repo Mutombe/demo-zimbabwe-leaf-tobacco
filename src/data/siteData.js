@@ -152,7 +152,7 @@ export const farmers = [
     quote:
       "They came to the field before the first rains and again before the sale. The buyer who grades my crop also drank tea with my mother. That is not a thing every merchant offers.",
     photo:
-      "https://images.unsplash.com/photo-1553531384-cc64ac80f931?auto=format&fit=crop&w=900&q=80&sat=-70",
+      "https://images.unsplash.com/photo-1741874299706-2b8e16839aaa?auto=format&fit=crop&w=900&q=80&sat=-70",
   },
   {
     name: "Tadiwa Chikwanda",
@@ -163,7 +163,7 @@ export const farmers = [
     quote:
       "I signed my first contract the year my daughter was born. She starts agronomy college this year. The leaf paid for both.",
     photo:
-      "https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=900&q=80&sat=-70",
+      "https://images.unsplash.com/photo-1596788068873-9ffd5cacd4c4?auto=format&fit=crop&w=900&q=80&sat=-70",
   },
   {
     name: "Farai Nyamhunga",
@@ -174,7 +174,7 @@ export const farmers = [
     quote:
       "A good buyer tells you the truth about your crop — even when the truth is hard. That is how a farmer gets better, season after season.",
     photo:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80&sat=-70",
+      "https://images.unsplash.com/photo-1615829949748-dbece8ce2e5c?auto=format&fit=crop&w=900&q=80&sat=-70",
   },
   {
     name: "Rumbidzai Chakanyuka",
@@ -185,7 +185,7 @@ export const farmers = [
     quote:
       "The agronomy programme was the first time anyone had walked my fields with me. The grades went up the next season. My husband calls them the professors.",
     photo:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80&sat=-70",
+      "https://images.unsplash.com/photo-1509099381441-ea3c0cf98b94?auto=format&fit=crop&w=900&q=80&sat=-70",
   },
 ];
 
