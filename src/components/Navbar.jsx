@@ -52,7 +52,7 @@ export default function Navbar() {
               alt={business.name}
               className="h-12 w-12 shrink-0"
               loading="eager"
-            />
+             onError={e => { e.currentTarget.style.display = 'none'; }} />
             <div className="flex flex-col leading-none min-w-0">
               <span
                 className={`font-display text-[17px] sm:text-[19px] tracking-tight truncate ${

@@ -25,7 +25,7 @@ export const business = {
   },
   rating: 4.3,
   reviewCount: 108,
-  logo: "/logo.png",
+  logo: "/logo.svg",
 };
 
 const waHref = (msg) =>

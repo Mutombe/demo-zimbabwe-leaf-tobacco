@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 gap-12 pb-14 border-b border-cream-100/10">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-8">
-              <img src={business.logo} alt={business.name} className="h-14 w-14" loading="lazy" />
+              <img src={business.logo} alt={business.name} className="h-14 w-14" loading="lazy"  onError={e => { e.currentTarget.style.display = 'none'; }} />
               <div>
                 <p className="font-display text-2xl text-cream-50">
                   {business.name}
